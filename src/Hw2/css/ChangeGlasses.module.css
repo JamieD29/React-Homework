@@ -1,0 +1,30 @@
+.backgroundImg{
+    background-image: url('../../assets/bg-grey.jpg');
+    height: fit-content;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.445);
+    display: flex;
+    align-items: center;
+}
+
+
+.header  p{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.glasses_box{
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 2px 6px 18px -2px rgba(0,0,0,0.62);
+-webkit-box-shadow: 2px 6px 18px -2px rgba(0,0,0,0.62);
+-moz-box-shadow: 2px 6px 18px -2px rgba(0,0,0,0.62);
+}
+

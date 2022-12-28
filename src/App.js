@@ -1,23 +1,10 @@
-// import Home from './Ex1/Home';
+import ChangeGlasses from "./Hw2/ChangeGlasses";
 
-import DataBinding from "./DemoDataBinding/DataBinding";
-import Loop from "./DemoDataBinding/Loop";
-import State from "./DemoDataBinding/State";
-import Car from "./Ex2_CarChangingColor/Car";
 function App() {
   return (
     <div className="App">
     
-    {/* <Home></Home> */}
-
-    {/* <DataBinding></DataBinding>
-    
-    <State/> */}
-
-
-    {/* <Car/> */}
-
-    <Loop/>
+    <ChangeGlasses/>
     
     </div>
   );
