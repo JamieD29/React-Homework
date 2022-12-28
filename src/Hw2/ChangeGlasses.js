@@ -129,7 +129,7 @@ export default class ChangeGlasses extends Component {
             <div className="card position-relative" style={{ width: '18rem' }}>
               <img className="shadow-sm rounded " src="./glassesImage/model.jpg" alt="modelImg"/>
 
-                {/*Try glass and glass's info  */}
+                {/*Trying glass and showing glass's info  */}
               <div className="card position-absolute bg-transparent border-0 " style={{top:'16px'}}>
               
                 <div className="glassImg position-relative py-4 px-5 mt-5 ms-1">
