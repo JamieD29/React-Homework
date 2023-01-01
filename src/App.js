@@ -4,6 +4,11 @@ import DataBinding from "./DemoDataBinding/DataBinding";
 import Loop from "./DemoDataBinding/Loop";
 import State from "./DemoDataBinding/State";
 import Car from "./Ex2_CarChangingColor/Car";
+
+import GrandPa from "./demoProps/GrandPa";
+
+
+import Home from "./ex3_Shopping/Home";
 function App() {
   return (
     <div className="App">
@@ -14,11 +19,13 @@ function App() {
     
     <State/> */}
 
-
     {/* <Car/> */}
 
-    <Loop/>
+    {/* <Loop/> */}
     
+    {/* <GrandPa/> */}
+
+    <Home></Home>
     </div>
   );
 }
