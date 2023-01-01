@@ -71,10 +71,10 @@ export default class ChangeGlasses extends Component {
 
 
   state ={
-    img_url: "./glassesImage/v1.png" ,
-    glasses_name : "GUCCI G8850U", 
-    glasses_price: 30,
-    glasses_desc:"Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. "
+    img_url: null ,
+    glasses_name : null, 
+    glasses_price: null,
+    glasses_desc: null
   };
 
   changeGlasses = (id) =>{
@@ -133,14 +133,14 @@ export default class ChangeGlasses extends Component {
               <div className="card position-absolute bg-transparent border-0 " style={{top:'16px'}}>
               
                 <div className="glassImg position-relative py-4 px-5 mt-5 ms-1">
-                  <img className="w-100" src={this.state.img_url} alt="glassImg"></img>
+                  <img className="w-100" src={this.state.img_url ? this.state.img_url : this.glasses[0].url} alt="glassImg"></img>
                 </div>
 
                 <div className="card-body ">
                   <div className="container bg-dark bg-gradient bg-opacity-75">
-                  <h4 className="text-white"> {this.state.glasses_name} </h4>
-                  <span className="fst-italic text-light fs-5"> $ {this.state.glasses_price}</span>
-                  <p className="text-light mt-1">{this.state.glasses_desc}</p>
+                  <h4 className="text-white"> {this.state.glasses_name ? this.state.glasses_name : this.glasses[0].name} </h4>
+                  <span className="fst-italic text-light fs-5"> $ {this.state.glasses_price ? this.state.glasses_price : this.glasses[0].price}</span>
+                  <p className="text-light mt-1">{this.state.glasses_desc ? this.state.glasses_desc : this.glasses[0].desc}</p>
                   </div>
                   
                 </div>
