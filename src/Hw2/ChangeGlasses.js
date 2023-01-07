@@ -118,7 +118,7 @@ export default class ChangeGlasses extends Component {
     return <div className={styles.backgroundImg}>
       <div className={styles.header}>
         <div className="container">
-          <p className="text-center fs-2">Try Glasses App</p>
+          <p className="text-center fs-2">Try On Glasses App</p>
         </div>
       </div>
 
