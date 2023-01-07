@@ -9,6 +9,9 @@ import GrandPa from "./demoProps/GrandPa";
 
 
 import Home from "./ex3_Shopping/Home";
+import DemoRedux from "./demoRedux/DemoRedux";
+
+import DemoCart from "./demoRedux/DemoCart";
 function App() {
   return (
     <div className="App">
@@ -25,7 +28,9 @@ function App() {
     
     {/* <GrandPa/> */}
 
-    <Home></Home>
+   {/* <DemoRedux/>  */}
+   <DemoCart></DemoCart>
+    {/* <Home></Home> */}
     </div>
   );
 }

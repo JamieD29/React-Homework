@@ -16,11 +16,11 @@ export default class ProductDetail extends Component {
             </div>
 
             <div className='col-7'>
-                <h2>Tên: {name}</h2>
+                <h2>Tên: <span className='fw-normal fst-italic'>{name}</span></h2>
                 <hr/>
                 <h4>Giá: ${price}</h4>
                 <hr/>
-                <h4>Mô tả: {description}</h4>
+                <h4>Mô tả: <span className='fw-normal fs-5'>{description}</span> </h4>
                 <hr/>
                 <h4>Số lượng: {quantity}</h4>
                 <hr/>

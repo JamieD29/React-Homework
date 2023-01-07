@@ -4,9 +4,9 @@ import ProductItem from "./ProductItem";
 export default class ProductList extends Component {
 
 renderProduct = () => 
-this.props.products.map((item)=>
+this.props.products.map((item) =>
     <div className="col-3" key={item.id}>
-        <ProductItem product = {item} showDetail={this.props.showDetail}></ProductItem>
+        <ProductItem product = {item} showDetail={this.props.showDetail} addToCart={this.props.addToCart}></ProductItem>
     </div>
 );
 

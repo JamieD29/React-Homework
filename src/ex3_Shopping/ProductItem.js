@@ -11,8 +11,8 @@ export default class ProductItem extends Component {
             <h5>${this.props.product.price}</h5>
 
             <div className='d-flex'>
-            <button className='btn btn-primary' onClick={()=>this.props.showDetail(this.props.product)}>Chi tiết</button>
-            <button className='btn btn-outline-warning ms-4'>Thêm vào giỏ</button>
+            <button className='btn btn-outline-primary' onClick={()=>this.props.showDetail(this.props.product)}>Chi tiết</button>
+            <button className='btn btn-warning ms-4' onClick={()=> this.props.addToCart(this.props.product)}>Thêm vào giỏ</button>
             </div>
           
         </div>
