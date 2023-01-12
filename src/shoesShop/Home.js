@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import ProductList from "./ProductList";
 import ProductDetail from "./ProductDetail";
 import Cart from "./Cart";
+import styles from './css/Home.module.css';
+
+import{FaCartPlus} from 'react-icons/fa';
+
 export default class Home extends Component {
   products = [
     {
@@ -147,7 +151,7 @@ export default class Home extends Component {
   ];
 
   state = {
-    _selectedProduct: null,
+    _selectedProduct: this.products[0],
     _cart: JSON.parse(localStorage.getItem('items')) || [],
   };
 
@@ -259,14 +263,13 @@ export default class Home extends Component {
   render() {
     return (
       <div className="container">
-        <h1 className="text-center">Shopping Online</h1>
 
         <button
-          className="btn btn-success"
+          className={`${styles.btnCart}`}
           data-bs-toggle="modal"
           data-bs-target="#cartModal"
         >
-          Giỏ hàng ({this.state._cart.length})
+          <FaCartPlus style={{fontSize: '26px'}}></FaCartPlus>  ({this.state._cart.length})
         </button>
         
 
@@ -282,8 +285,6 @@ export default class Home extends Component {
         )}
         <Cart cart={this.state._cart} deleteCartItem={this.deleteCartItem} increaseQuantity={this.increaseQuantity} decreaseQuantity={this.decreaseQuantity} checkout={this.checkout}/>
       </div>
-
-     
     );
   }
 }

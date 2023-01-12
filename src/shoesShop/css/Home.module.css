@@ -1,0 +1,15 @@
+.btnCart {
+  position: fixed;
+  color: white;
+  bottom: 20px;
+  right: 40px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+  border: none;
+  background-color: rgb(236, 86, 86);
+  box-shadow: -1px 10px 45px -7px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: -1px 10px 45px -7px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: -1px 10px 45px -7px rgba(0, 0, 0, 0.54);
+}

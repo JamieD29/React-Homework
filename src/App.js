@@ -1,11 +1,13 @@
 
-import Home from "./ex3_Shopping/Home";
+import Header from "./shoesShop/Header";
+import Home from "./shoesShop/Home";
 
 
 
 function App() {
   return (
     <div className="App">
+    <Header/>
     <Home></Home>
     </div>
   );
