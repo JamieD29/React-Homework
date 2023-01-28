@@ -2,7 +2,7 @@
 
  <sub>Homework for ***first day*** is in the **hw_day1** branch</sub> 
 
-**Updated 29/12/2022:** 
+**Updated 29/12/2022: Try On Glasses App ** 
 <sub>Homework for ***second day*** is in the **hw_day2** branch</sub> 
 
 **Updated 12/01/2023: SHOES STORE ** 
