@@ -10,6 +10,8 @@ export const actionFetchStudents = () => {
       });
 
       // const {searchTerm} = getState().userList;
+      const {searchTerm} = getState().students;
+      
 
       const res = await axios({
         method: "GET",
@@ -19,10 +21,20 @@ export const actionFetchStudents = () => {
         //   }
       });
 
+      const searchedStudent = res.data.filter((item) => {
+        if(searchTerm === ''){
+          return item;
+        }
+        if(item.studentID.toLowerCase().trim().includes(searchTerm.toLowerCase().trim())){
+          return item;
+        }
+      });
+
       dispatch({
         type: actionTypes.UPDATE_STUDENT_LIST_FULFILLED,
-        payload: res.data,
+        payload: searchedStudent,
       });
+
     } catch (err) {
       console.log(err);
       dispatch({
@@ -99,3 +111,15 @@ export const actionUpdateStudent = (id, student) => {
     }
   };
 };
+
+
+export const actionUpdateSearchTerm = (searchTerm) => {
+  return  (dispatch) =>{
+      dispatch({
+          type: actionTypes.UPDATE_SEARCH_TERM,
+          payload: searchTerm,
+      })
+
+      dispatch(actionFetchStudents());
+  }
+}

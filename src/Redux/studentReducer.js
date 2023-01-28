@@ -4,6 +4,7 @@ import * as actionTypes from "./constants/studentConstants";
 const initialState = {
     students:[],
     selectedStudent: null,
+    searchTerm: "",
     isLoading: false,
     error: null,
 };
@@ -31,6 +32,11 @@ const reducer = (state = initialState, {type, payload}) => {
                 draft.isLoading = false;
                 break;
             }
+            case actionTypes.UPDATE_SEARCH_TERM: {
+                draft.isLoading = false;
+                draft.searchTerm = payload;
+                break;
+              }
 
             default: return draft;
         }

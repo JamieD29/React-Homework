@@ -9,10 +9,10 @@ import {
 import SearchStudent from "./SearchStudent";
  class StudentList extends Component {
 
-
+ 
 
   renderTable = () => {
-    const {studentList, loading, error} = this.props;
+    const {studentList, loading, error, searchTerm} = this.props;
     if(loading){
       return (
         <div className="d-flex justify-content-center">
@@ -25,7 +25,9 @@ import SearchStudent from "./SearchStudent";
     if(error){
       return <h1>{error}</h1>;
     }
-    return studentList.map((item, index)=>{
+    return studentList
+    
+    .map((item, index)=>{
       const {studentID, name, phoneNumber, email, id} = item;
       return (
         <tr key={id}>
@@ -85,4 +87,5 @@ export default connect((state)=> ({
   studentList: state.students.students,
   loading: state.students.isLoading,
   error: state.students.error,
+  searchConstant: state.students.searchTerm
 }))(StudentList);
