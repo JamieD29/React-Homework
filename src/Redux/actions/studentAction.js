@@ -123,3 +123,16 @@ export const actionUpdateSearchTerm = (searchTerm) => {
       dispatch(actionFetchStudents());
   }
 }
+
+export const actionButtonCancel = (color,inner,display)=>{
+  return (dispatch)=>{
+    dispatch({
+      type: actionTypes.UPDATE_BUTTON_STYLE,
+      payload:{
+        styleBtn : color,
+        value : inner,
+        displayValue : display
+      }
+    })
+  }
+}

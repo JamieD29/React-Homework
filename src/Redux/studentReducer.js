@@ -7,6 +7,11 @@ const initialState = {
     searchTerm: "",
     isLoading: false,
     error: null,
+    buttonConstants:{
+        styleBtn: "success",
+        value:"SUBMIT",
+        displayValue:"d-none"
+    }
 };
 
 const reducer = (state = initialState, {type, payload}) => {
@@ -36,7 +41,12 @@ const reducer = (state = initialState, {type, payload}) => {
                 draft.isLoading = false;
                 draft.searchTerm = payload;
                 break;
-              }
+            }
+            case actionTypes.UPDATE_BUTTON_STYLE:{
+                draft.isLoading = false;
+                draft.buttonConstants = payload;
+                break;
+            }
 
             default: return draft;
         }

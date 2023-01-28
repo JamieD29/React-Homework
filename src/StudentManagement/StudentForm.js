@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { actionCreateStudent, actionUpdateStudent } from "../Redux/actions/studentAction";
+import { actionButtonCancel, actionCreateStudent, actionUpdateStudent } from "../Redux/actions/studentAction";
 class StudentForm extends Component {
   state = {
     values: {
@@ -42,6 +42,11 @@ class StudentForm extends Component {
       case "studentID": {
         if (!value.trim()) {
           return "*Mã số sinh viên không được để trống";
+        }
+        for(let student of this.props.students){
+          if(value === student.studentID && !student){
+            return "*Mã số sinh viên này đã tồn tại"
+          }
         }
         return "";
       }
@@ -119,13 +124,28 @@ class StudentForm extends Component {
         email: "",
       },
     });
+    this.props.dispatch(actionButtonCancel("success", "SUBMIT", "d-none"))
   };
+
+  handleCancel = (eve)=>{
+    eve.preventDefault();
+    this.setState({
+      values: {
+        studentID: "",
+        name: "",
+        phoneNumber: "",
+        email: "",
+      },
+    })
+    this.props.dispatch(actionButtonCancel("success", "SUBMIT", "d-none"))
+  }
 
   render() {
     const { values, errors } = this.state;
+   
     return (
       <div className="px-4">
-        <form onSubmit={this.handleSubmit}>
+        <form >
           <div className="row">
             <div className="mb-3 col-6">
               <label className="form-label">Mã sinh viên</label>
@@ -189,7 +209,8 @@ class StudentForm extends Component {
             </div>
           </div>
 
-          <button className="btn btn-success">Submit</button>
+          <button className={`btn btn-${this.props.btnConstants.styleBtn}  `} onClick={this.handleSubmit}>{this.props.btnConstants.value}</button>
+          <button className={` ${this.props.btnConstants.displayValue} btn ms-3 btn-warning`} onClick={this.handleCancel}>Cancel</button>
         </form>
       </div>
     );
@@ -205,5 +226,7 @@ class StudentForm extends Component {
 }
 
 export default connect((state) => ({
+  students: state.students.students,
   student: state.students.selectedStudent,
+  btnConstants: state.students.buttonConstants
 }))(StudentForm);

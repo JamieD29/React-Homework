@@ -4,7 +4,8 @@ import axios from "axios";
 import {
   actionFetchStudents, 
   actionDeleteStudent,
-  actionSelectedStudent
+  actionSelectedStudent,
+  actionButtonCancel
 } from '../Redux/actions/studentAction';
 import SearchStudent from "./SearchStudent";
  class StudentList extends Component {
@@ -51,6 +52,7 @@ import SearchStudent from "./SearchStudent";
   }
 
   handleSelected = (id) => {
+    this.props.dispatch(actionButtonCancel("info", "UPDATE", "d-inline"));
    this.props.dispatch(actionSelectedStudent(id))
   }
 
@@ -87,5 +89,6 @@ export default connect((state)=> ({
   studentList: state.students.students,
   loading: state.students.isLoading,
   error: state.students.error,
-  searchConstant: state.students.searchTerm
+  searchConstant: state.students.searchTerm,
+  btnConstants: state.students.buttonConstants
 }))(StudentList);

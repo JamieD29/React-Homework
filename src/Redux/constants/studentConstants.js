@@ -8,3 +8,5 @@ export const UPDATE_SELECTED_STUDENT = "student/UPDATE_SELECTED_STUDENT";
 
 export const UPDATE_SEARCH_TERM = "student/UPDATE_SEARCH_TERM";
 
+export const UPDATE_BUTTON_STYLE = "student/UPDATE_BUTTON_STYLE";
+
