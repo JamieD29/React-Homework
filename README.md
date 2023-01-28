@@ -5,7 +5,7 @@
 **Updated 29/12/2022:** 
 <sub>Homework for ***second day*** is in the **hw_day2** branch</sub> 
 
-**Updated 12/01/2023:** 
+**Updated 12/01/2023: SHOES STORE ** 
 <sub>Homework for ***third day*** is in the **hw_day3** branch</sub> 
 
 **Updated 25/01/2023: BOOKING TICKET ** 
