@@ -136,6 +136,12 @@ class StudentForm extends Component {
         phoneNumber: "",
         email: "",
       },
+      errors:{
+        studentID: "",
+        name: "",
+        phoneNumber: "",
+        email: "",
+      }
     })
     this.props.dispatch(actionButtonCancel("success", "SUBMIT", "d-none"))
   }
